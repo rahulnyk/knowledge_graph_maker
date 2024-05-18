@@ -1,0 +1,10 @@
+*/__pycache__
+*/.DS_Store
+.DS_Store
+old_notebooks
+.env
+experiments*
+.venv
+assets/evolution_gif
+assets/*.psd
+data
