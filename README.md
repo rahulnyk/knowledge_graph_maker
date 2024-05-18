@@ -25,8 +25,6 @@ This is a python library that can create knowledge graphs out of any text using 
 
 Here are the steps to create the knowledge graph.
 
-To set up this project, [you will need Poetry](https://python-poetry.org/docs/configuration/)
-
 ```zsh
 # Get the library
 $ pip install knowledge-graph-maker
