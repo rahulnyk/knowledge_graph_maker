@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "knowledge-graph-maker"
-version = "0.1.2"
+version = "0.2.0"
 description = "Create knowledge graph out of any text using a given ontology"
 authors = ["Rahul Nayak <rahul.nyk@gmail.com>"]
 readme = "README.md"
@@ -12,7 +12,7 @@ pathlib = "^1.0.1"
 uuid = "^1.30"
 jupyterlab = "^4.0.8"
 yachalk = "^0.1.5"
-groq = "^0.5.0"
+groq = "^0.6.0"
 python-dotenv = "^1.0.1"
 neo4j = "5.19.0"
 neomodel = "^5.3.0"

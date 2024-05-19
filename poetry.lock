@@ -526,13 +526,13 @@ files = [
 
 [[package]]
 name = "groq"
-version = "0.5.0"
+version = "0.6.0"
 description = "The official Python library for the groq API"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "groq-0.5.0-py3-none-any.whl", hash = "sha256:a7e6be1118bcdfea3ed071ec00f505a34d4e6ec28c435adb5a5afd33545683a1"},
-    {file = "groq-0.5.0.tar.gz", hash = "sha256:d476cdc3383b45d2a4dc1876142a9542e663ea1029f9e07a05de24f895cae48c"},
+    {file = "groq-0.6.0-py3-none-any.whl", hash = "sha256:99e2e5ea48df074c09bffcc349b049d3573d9cb35da872d4acbbe50a4b266414"},
+    {file = "groq-0.6.0.tar.gz", hash = "sha256:a96f3a49a0d4119a1bec7f6352af0a87733a2865d464da34a4eb27bfe8068c7e"},
 ]
 
 [package.dependencies]
@@ -2366,4 +2366,4 @@ setuptools = "*"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "79278a4b1e1afba527b8bb4338a43f70e715297b661a5eb71287e96335a4c478"
+content-hash = "b12cd343e5f81844f893650e9ff1911f4d6ca900e09de3f2fea293ae30f53459"
