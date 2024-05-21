@@ -1,7 +1,6 @@
-from groq import Groq
+from groq import Groq, GroqError
 from ..types import LLMClient
 
-client = Groq()
 
 
 class GroqClient(LLMClient):
@@ -14,10 +13,17 @@ class GroqClient(LLMClient):
         self._model = model
         self._temperature = temperature
         self._top_p = top_p
+        try:
+            self._client = Groq()
+        except GroqError as e: 
+            print(e)
+            self._client = None
 
     def generate(self, user_message: str, system_message: str) -> str:
         print("Using Model: ", self._model)
-        result = client.chat.completions.create(
+        if not self._client:
+            print("Cannot use a client without API_KEY")
+        result = self._client.chat.completions.create(
             messages=[
                 {"role": "system", "content": system_message},
                 {
