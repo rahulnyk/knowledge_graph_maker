@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "knowledge-graph-maker"
-version = "0.2.0"
+version = "0.2.1"
 description = "Create knowledge graph out of any text using a given ontology"
 authors = ["Rahul Nayak <rahul.nyk@gmail.com>"]
 readme = "README.md"
