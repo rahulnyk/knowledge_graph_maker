@@ -153,13 +153,16 @@ class GraphMaker:
         graph: List[Edge] = []
         for index, doc in enumerate(docs):
             ## order defines the chronology or the order in which the documents should in interpretted.
-            order = getattr(doc, order_attribute) if order_attribute else index
-            green_logger.info(f"Document: {index+1}")
-            subgraph = self.from_document(doc, order)
-            graph = [*graph, *subgraph]
-            if delay_s_between > 0:
-                green_logger.info(
-                    f"Waiting for {delay_s_between}s before the next request ... "
-                )
-                time.sleep(delay_s_between)
+            try:
+                order = getattr(doc, order_attribute) if order_attribute else index
+                green_logger.info(f"Document: {index + 1}")
+                subgraph = self.from_document(doc, order)
+                graph = [*graph, *subgraph]
+                if delay_s_between > 0:
+                    green_logger.info(
+                        f"Waiting for {delay_s_between}s before the next request ... "
+                    )
+                    time.sleep(delay_s_between)
+            except Exception:
+                green_logger.error(f"error:{e},doc:{doc}")
         return graph
